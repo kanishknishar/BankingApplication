@@ -1,0 +1,5 @@
+This exercise was intended to test my knowledge of ArrayLists. 
+
+You create a banking application which would have a bank class which hold an ArrayList of its branches. The branch class would have a string name and itself would have an ArrayList of customers. Finally, the customer class would have a string name and an ArrayList of transactions.
+
+The program runs entirely by itself without the need for manually inputting data into the code itself.
