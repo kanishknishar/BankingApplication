@@ -11,7 +11,7 @@ public class Bank {
         return true;
     }
 
-    public static boolean addCustomer (String branchName, String customerName, double initialAmount) {
+    public static boolean addCustomer(String branchName, String customerName, double initialAmount) {
         Branch branch = findBranch(branchName);
 
         if (branch == null) {
@@ -31,7 +31,7 @@ public class Bank {
         return branch.addCustomerTransaction(customerName, amount);
     }
 
-    private static Branch findBranch (String name) {
+    private static Branch findBranch(String name) {
         for (Branch branch : branches) {
             if (branch.getName().equals(name)) {
                 return branch;
@@ -41,7 +41,7 @@ public class Bank {
         return null;
     }
 
-    public static boolean showBranchCustomers (String branchName) {
+    public static boolean showBranchCustomers(String branchName) {
         Branch branch = findBranch(branchName);
 
         if (branch == null) {
@@ -61,7 +61,7 @@ public class Bank {
             System.out.printf("Now seeing customers of the %s branch:\n", branch.getName());
             int customerCount = 1;
             for (Customer customer : branch.getCustomersList()) {
-                System.out.printf("%s. %s - \n", RomanNumerals.roman(customerCount), customer.getName()); //Using a Roman numeral enums just to make it look fancier.
+                System.out.printf("%s. %s - \n", RomanNumerals.roman(customerCount), customer.getName());
                 if (seeTransactions) {
                     customer.transactionHistory();
                 }
