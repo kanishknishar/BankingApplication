@@ -2,10 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Deutsche Bank. View our branches, customers and their transaction history.");
 
-        loop: while(true) {
+        loop: while (true) {
             printInstructions();
             System.out.print("\nPlease selection an option: ");
             String input = scanner.nextLine();
@@ -49,7 +50,7 @@ public class Main {
         Bank.viewBranches();
     }
 
-    private static void viewBranchCustomers () {
+    private static void viewBranchCustomers() {
         System.out.println("Which branch's customers would you like to see?");
         String branchName = scanner.nextLine();
 

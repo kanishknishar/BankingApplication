@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Branch {
     private String name;
-    private final ArrayList<Customer> customersList = new ArrayList<>(); //IntelliJ suggestion for final
+    private final ArrayList<Customer> customersList = new ArrayList<>();
 
-    public Branch (String branchName) {
+    public Branch(String branchName) {
         this.name = branchName;
     }
 
@@ -24,10 +24,10 @@ public class Branch {
         }
     }
 
-    public boolean addCustomer (String name, double initialAmount) {
+    public boolean addCustomer(String name, double initialAmount) {
         Customer customer = findCustomer(name);
 
-        if(findCustomer(customer.getName()) == null) {
+        if (findCustomer(customer.getName()) == null) {
             return customersList.add(customer);
         }
 
@@ -36,7 +36,7 @@ public class Branch {
 
     }
 
-    private Customer findCustomer(String  name) {
+    private Customer findCustomer(String name) {
         for (Customer customer : customersList) {
             if (customer.getName().equals(name)) {
                 return customer;
@@ -45,7 +45,7 @@ public class Branch {
         return null;
     }
 
-    public boolean addCustomerTransaction (String name, double transaction) {
+    public boolean addCustomerTransaction(String name, double transaction) {
         Customer customer = findCustomer(name);
         if (customer == null) {
             return false;
