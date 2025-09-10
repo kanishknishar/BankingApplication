@@ -8,12 +8,12 @@ public class Customer {
         return name;
     }
 
-    public Customer (String name, double initialAmount) {
+    public Customer(String name, double initialAmount) {
         this.name = name;
         this.transactionsList.add(initialAmount);
     }
 
-    public boolean addTransaction (double transaction) {
+    public boolean addTransaction(double transaction) {
         if (transaction < 0) {
             return false;
         }

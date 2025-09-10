@@ -14,6 +14,7 @@ public class RomanNumerals {
         D(500),
         CM(900),
         M(1000);
+
         int weight;
 
         Numeral(int weight) {
@@ -21,17 +22,16 @@ public class RomanNumerals {
         }
     };
 
-
     public static String roman(int n) {
 
-        if( n <= 0) {
+        if (n <= 0) {
             throw new IllegalArgumentException();
         }
 
         StringBuilder buf = new StringBuilder();
 
         final Numeral[] values = Numeral.values();
-        for (int i = values.length - 1; i  >= 0;i--) {
+        for (int i = values.length - 1; i >= 0; i--) {
             while (n >= values[i].weight) {
                 buf.append(values[i]);
                 n -= values[i].weight;
